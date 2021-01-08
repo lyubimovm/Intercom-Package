@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "Intercom",
+    platforms: [
+        .iOS(.v10)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -20,7 +23,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "Intercom",
-            path: "Intercom.xcframework"
+            url: "https://github.com/lyubimovm/Intercom-Package/raw/master/Intercom.xcframework.zip",
+            checksum: "472989853b02617b1cb2afd4128c94f73648e681d6be5c473356d374e5d3b995"
         )
     ]
 )
